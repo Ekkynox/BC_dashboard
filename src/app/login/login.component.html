@@ -1,0 +1,23 @@
+<div class="example-container">
+
+    <img class="logo" src="../../assets/logo.png" />
+    <h1>Dashboard La Nîmes'alerie</h1>
+
+    <form (ngSubmit)="sendForm(form)" #form="ngForm">
+        <mat-form-field>
+            <mat-label>Nom d'utilisateur</mat-label>
+            <input matInput required [(ngModel)]="user" name="user">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Mot de passe</mat-label>
+            <input matInput required [type]="hide ? 'password' : 'text'" [(ngModel)]="password" name="password">
+            <button type="button" class="icon" mat-icon-button matSuffix (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <p *ngIf="serviceAuth.failedConnection">Identifiants incorrects.</p>
+        <button mat-raised-button color="primary">Se connecter</button>
+    </form>
+</div>

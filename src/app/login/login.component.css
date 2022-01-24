@@ -1,0 +1,49 @@
+.icon {
+  border: none;
+  border-radius: 100%;
+}
+
+mat-form-field {
+  margin: 0 1em 0 1em;
+  width: 100%;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: auto;
+  margin-top: 7rem;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+button[mat-raised-button] {
+  width: 50%;
+}
+
+form p {
+  background: rgb(255, 175, 175);
+  border-radius: 0.5em;
+  border: 1px solid rgb(255, 94, 94);
+  padding: 0.7em 1.2em 0.7em 1.2em;
+  color: rgb(219, 0, 0);
+}
+
+@media (max-width: 1120px) {
+  .example-container {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .example-container {
+    width: 80%;
+  }
+}
